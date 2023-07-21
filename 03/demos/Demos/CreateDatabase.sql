@@ -32,14 +32,14 @@ ALTER DATABASE BobsShoes
 ALTER DATABASE BobsShoes
     ADD FILE (
        NAME = BobsData,
-       FILENAME = 'C:\SQLFiles\BobsShoes\BobsData.mdf'
+       FILENAME = '/OPT/SQLFiles/BobsShoes/BobsData.mdf'
     )
     TO FILEGROUP BobsData;
  
 ALTER DATABASE BobsShoes
     ADD LOG FILE ( 
         NAME = BobsLogs,
-        FILENAME = 'C:\SQLFiles\BobsShoes\BobsLog.ldf'
+        FILENAME = '/OPT/SQLFiles/BobsShoes/BobsLog.ldf'
     );
 
 GO
