@@ -17,7 +17,7 @@ SELECT name, description
 -- Show SQL collations not containing 'LATIN'
 SELECT name, description 
     FROM sys.fn_helpcollations()
-    WHERE name LIKE N'SQL_%' AND name not like N'SQL_Latin%';     
+    WHERE name LIKE N'SQL_%' AND name not like N'SQL_Latin%';
 
 -- Change the customer column to a Scandinavian collation.
 ALTER TABLE Orders.OrderTracking

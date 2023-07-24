@@ -4,7 +4,7 @@ GO
 -- DROP TABLES In Foreign Key order
 DROP TABLE IF EXISTS Orders.OrderItems, Orders.Orders
 
-CREATE TABLE Orders.Orders (  
+CREATE TABLE Orders.Orders (
     OrderID int IDENTITY(1,1) NOT NULL
         CONSTRAINT PK_Orders_OrderID PRIMARY KEY,
     OrderDate date NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE Orders.Orders (
         CONSTRAINT FK_Orders_CustID_Customers_CustID 
             FOREIGN KEY REFERENCES Orders.Customers (CustID),
     OrderIsExpedited bit NOT NULL
- );
+);
 
 CREATE TABLE Orders.OrderItems (
     OrderItemID int IDENTITY(1,1) NOT NULL
@@ -31,30 +31,30 @@ CREATE TABLE Orders.OrderItems (
 
 -- Add the big sandals
 INSERT INTO Orders.Stock (
-        StockSKU, 
-        StockName, 
-        StockSize, 
-        StockPrice)
+    StockSKU,
+    StockName,
+    StockSize,
+    StockPrice)
 
 VALUES
     ('SANDALS', 'Roman Sandals', '17', 50.);
 
-SELECT * from Orders.Stock where StockSKU = 'SANDALS'    
+SELECT * from Orders.Stock where StockSKU = 'SANDALS'
 
 -- Add the order item
 INSERT INTO Orders.OrderItems(
-    OrderID, 
+    OrderID,
     StockID,
-    Quantity, 
+    Quantity,
     Discount)
 
 VALUES
     (1, 4, 1, 0.);
 
-SELECT * FROM orders.OrderItems WHERE StockID = 4;    
+SELECT * FROM orders.OrderItems WHERE StockID = 4;
 
 -- Try to delete the sandals from the stock table
-DELETE orders.Stock 
+DELETE orders.Stock
     WHERE StockID = 4;
 
 RETURN;
@@ -62,22 +62,22 @@ RETURN;
 -- Populate the tables
 
 INSERT INTO Orders.Customers (
-        CustName, 
-        CustStreet, 
-        CustCity, 
-        CustStateProv, 
-        CustCountry, 
-        CustPostalCode, 
-        CustSalutation)
-VALUES 
+    CustName,
+    CustStreet,
+    CustCity,
+    CustStateProv,
+    CustCountry,
+    CustPostalCode,
+    CustSalutation)
+VALUES
     ('Arthur Dent', '1 Main St', 'Golgafrincham', 'GuideShire', 'UK', '1MSGGS', 'Mr.'),
     ('Trillian Astra', '42 Cricket St.', 'Islington', 'Greater London', 'UK', '42CSIGL', 'Mrs.');
 
 INSERT INTO Orders.Stock (
-        StockSKU, 
-        StockName, 
-        StockSize, 
-        StockPrice)
+    StockSKU,
+    StockName,
+    StockSize,
+    StockPrice)
 
 VALUES
     ('OXFORD01', 'Oxford', '10_D', 50.),
@@ -86,9 +86,9 @@ VALUES
     ('SANDALS', 'Roman Sandals', '17', 50.);
 
 INSERT INTO Orders.Orders(
-    OrderDate, 
-    OrderRequestedDate, 
-    CustID, 
+    OrderDate,
+    OrderRequestedDate,
+    CustID,
     OrderIsExpedited)
 
 VALUES 
@@ -96,9 +96,9 @@ VALUES
     ('20190301', '20190401', 2, 0);
 
 INSERT INTO Orders.OrderItems(
-    OrderID, 
+    OrderID,
     StockID,
-    Quantity, 
+    Quantity,
     Discount)
 
 VALUES
@@ -115,8 +115,8 @@ RETURN;
 -- Can't insert an order item with a non-existent orderid
 
 INSERT INTO Orders.OrderItems(
-    OrderID, 
+    OrderID,
     StockID,
-    Quantity, 
+    Quantity,
     Discount)
 VALUES (42,42,42,42.)

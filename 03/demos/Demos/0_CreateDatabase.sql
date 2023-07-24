@@ -31,11 +31,11 @@ ALTER DATABASE BobsShoes
     ADD FILEGROUP BobsData;
 ALTER DATABASE BobsShoes
     ADD FILE (
-       NAME = BobsData,
-       FILENAME = '/OPT/SQLFiles/BobsShoes/BobsData.mdf'
+        NAME = BobsData,
+        FILENAME = '/OPT/SQLFiles/BobsShoes/BobsData.mdf'
     )
     TO FILEGROUP BobsData;
- 
+
 ALTER DATABASE BobsShoes
     ADD LOG FILE ( 
         NAME = BobsLogs,

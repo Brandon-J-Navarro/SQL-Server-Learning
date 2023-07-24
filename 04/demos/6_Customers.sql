@@ -8,4 +8,4 @@ CREATE TABLE Orders.Customers (
     CustCountry nvarchar(100) NOT NULL,
     CustPostalCode nvarchar(20) NOT NULL,
     CustSalutation char(5) NOT NULL
-); 
+);
