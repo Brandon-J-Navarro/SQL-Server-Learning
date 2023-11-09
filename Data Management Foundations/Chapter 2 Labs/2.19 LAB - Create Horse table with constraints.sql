@@ -1,6 +1,6 @@
 -- 2.19 LAB - Create Horse table with constraints
--- Create a Horse table with the following columns, data types, and constraints. NULL is allowed unless 'not NULL' is explicitly stated.
 
+-- Create a Horse table with the following columns, data types, and constraints. NULL is allowed unless 'not NULL' is explicitly stated.
 -- ID - integer with range 0 to 65535, auto increment, primary key
 -- RegisteredName - variable-length string with max 15 chars, not NULL
 -- Breed - variable-length string with max 20 chars, must be one of the following: Egyptian Arab, Holsteiner, Quarter Horse, Paint, Saddlebred

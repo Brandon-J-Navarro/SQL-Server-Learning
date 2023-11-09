@@ -1,6 +1,6 @@
 -- 2.20 LAB - Create Student table with constraints
--- Create a Student table with the following column names, data types, and constraints:
 
+-- Create a Student table with the following column names, data types, and constraints:
 -- ID - integer with range 0 to 65 thousand, auto increment, primary key
 -- FirstName - variable-length string with max 20 chars, not NULL
 -- LastName - variable-length string with max 30 chars, not NULL

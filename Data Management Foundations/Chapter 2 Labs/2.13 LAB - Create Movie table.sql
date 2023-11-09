@@ -1,6 +1,6 @@
 -- 2.13 LAB - Create Movie table
--- Create a Movie table with the following columns:
 
+-- Create a Movie table with the following columns:
 -- ID - positive integer with maximum value of 50,000
 -- Title - variable-length string with up to 50 characters
 -- Rating - fixed-length string with 4 characters

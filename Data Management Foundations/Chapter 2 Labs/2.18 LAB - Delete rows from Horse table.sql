@@ -1,6 +1,6 @@
 -- 2.18 LAB - Delete rows from Horse table
--- The Horse table has the following columns:
 
+-- The Horse table has the following columns:
 -- ID - integer, auto increment, primary key
 -- RegisteredName - variable-length string
 -- Breed - variable-length string
